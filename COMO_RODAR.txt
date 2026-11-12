@@ -1,0 +1,28 @@
+PASSO A PASSO (Windows / PowerShell, dentro desta pasta)
+
+1) Criar o ambiente virtual:
+   py -m venv .venv
+
+2) Ativar:
+   .venv\Scripts\Activate.ps1
+   (se bloquear, use .venv\Scripts\python.exe no lugar de "python" nos comandos abaixo)
+
+3) Instalar dependencias:
+   python -m pip install -r requirements.txt
+
+4) Testar a conexao:
+   python -c "from conexao import banco; print('Conectado a:', banco.name)"
+
+5) Rodar um projeto (sempre desta pasta):
+   python -m p01_alunos.main
+   python -m p02_biblioteca.main
+   python -m p03_estoque.main
+   python -m p04_contatos.main
+   python -m p05_financas.main
+   python -m p06_tarefas.main
+   python -m p07_turmas_notas.main
+   python -m p08_corretor_provas.main
+   uvicorn p09_api.main:app --reload      (abrir http://127.0.0.1:8000/docs)
+   python -m p10_dashboard.main
+
+NAO envie o arquivo .env para o GitHub.
